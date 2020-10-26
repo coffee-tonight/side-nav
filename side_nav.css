@@ -1,126 +1,96 @@
-*
-{
-    margin: 0;
+
+header {
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 50px;
+
+  box-sizing: border-box;
+  background-color: #263238;
+  color: rgb(170, 170, 170);
+  position: absolute;
+}
+header .logo {
+  float: left;
+  font-size: 22px;
+  font-weight: 450;
+  line-height: 50px;
+  color: #ef5350;
+}
+header nav {
+  float: right;
+  padding-right: 10%;
+}
+header nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+header nav ul li {
+  list-style: none;
+}
+.logo {
+  padding-left: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-size: 17px;
+  line-height: 50px;
+  box-sizing: border-box;
+  height: 50px;
+  padding: 0 20px;
+  color: white;
+}
+header nav ul li:hover {
+  background-color: #ef5350;
+}
+.navbarIcon {
+  font-size: 35px;
+  display: flex;
+  line-height: 50px;
+  color: white;
+  float: right;
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .navbarIcon {
+    display: block;
+    margin-right: 10px;
+  }
+  header .logo {
+    margin-left: 10px;
+    border-bottom: 0.5px solid white;
+  }
+  header {
     padding: 0;
-}
-html, body
-{
-    background-color: azure;
+  }
+
+  header nav {
+    display: none;
+    /* margin-top: 50px; */
+    transition: 0.5s;
+    width: 100%;
     margin: 0;
-    height: 100%;
-}
+    padding-right: 0%;
+    left: -100%;
+  }
 
-        canvas {
-          display: block;
-          vertical-align: bottom;
-        }
+  header nav.activetrue {
+    display: block;
+    left: 0;
+  }
 
-        /* ---- particles.js container ---- */
+  header nav ul {
+    display: block;
+    background-color: #263238;
+  }
+  header nav ul li {
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+  }
 
-        #particles-js {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          background-color: #b61924;
-          background-image: url("");
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: 50% 50%;
-        }
-
-        .count-particles{
-          background: #000022;
-          position: absolute;
-          top: 48px;
-          left: 0;
-          width: 80px;
-          color: #13E8E9;
-          font-size: .8em;
-          text-align: left;
-          text-indent: 4px;
-          line-height: 14px;
-          padding-bottom: 2px;
-          font-family: Helvetica, Arial, sans-serif;
-          font-weight: bold;
-        }
-
-        .js-count-particles{
-          font-size: 1.1em;
-        }
-
-        #stats,
-        .count-particles{
-          -webkit-user-select: none;
-        }
-
-        #stats{
-          border-radius: 3px 3px 0 0;
-          overflow: hidden;
-        }
-
-        .count-particles{
-          border-radius: 0 0 3px 3px;
-        }
-
-.nav .nav-bar{
-    position: fixed;
-    width: 100vw;
-    height: 50px;
-    background: linear-gradient(180deg,  #202020, transparent);
-    z-index: 0;
-}
-.nav .nav-button
-{
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    background-color: brown;
-    z-index: 1;
-}
-.nav .nav-button:before
-{
-    content: '';
-    width: 40px;
-    height: 6px;
-    background-color: aliceblue;
-    position: absolute;
-    top: 6px;
-    margin: 4px;
-}
-.nav .nav-button:after
-{
-    content: '';
-    width: 40px;
-    height: 6px;
-    background-color: aliceblue;
-    bottom: 6px;
-    margin: 4px;
-}
-.nav .ell li a
-{
-    margin: 10px;
-    text-decoration: none;
-    font-size: 16px;
-    color: #f00;
-}
-.nav .ell li
-{
-    margin: 20px;
-    list-style: none;
-}
-.nav .ell
-{
-    position: fixed;
-    top: 50px;
-    overflow: hidden;
-    width: 0;
-    height: 100vh;
-    background: #202020;
-    transition: 0.2s;
-}
-.content
-{
-    width: cover;
-    height: 500px;
-    background: #f4ff54;
+  header nav ul li a {
+    width: 100%;
+  }
 }
