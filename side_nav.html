@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Page Title</title>
-    <link rel='stylesheet' type='text/css' media='screen' href='../css/side_nav.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./side_nav.css'>
     
 <!--   IMportant meta tags for SEO   -->
     
@@ -26,25 +26,23 @@
         <div class="nav-bar">
 
         </div>
-        <div id="ell" class="ell">
-                <ul>
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                    <li>
-                        <a href="#">Explore</a>
-                    </li>
-                    <li>
-                        <a href="#">Study</a>
-                    </li>
-                    <li>
-                        <a href="https://youthforsustainability.in">Youth For Sustainability</a>
-                    </li>
-                </ul>
-            </div>
+        <div><header>
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  crossorigin="anonymous"/>
+              
+              <div className="logo">Portfolio</div>
+              <div className="navbarIcon"><i className="fad fa-bars" onClick={navFunc}></i></div>
+             <nav className={"active"+navBar}>
+                  <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Skills</a></li>
+                  <li><a href="#">About me</a></li>
+                  <li><a href="#">Contact</a></li>
+                  </ul>
+              </nav>
+    
+         
+          </header>
+          </div>
     </div>    
 
     <div class="content" onclick="expand()">
